@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useReducer } from "react";
-import { reducer, initialState, AppState, Action } from "./reducer";
-import { ObjectType } from "../components/recursive-input";
+import { reducer, initialState, Action, ObjectType } from "./reducer";
 
 interface ContextProps {
   state: ObjectType;

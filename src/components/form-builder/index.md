@@ -18,7 +18,7 @@ type ObjectType = {
     | null;
 };
 
-type RecursiveInputProps = {
+type FormBuilderProps = {
   obj: ObjectType;
   label: string;
 };
@@ -143,7 +143,7 @@ const renderInputs = (
   });
 };
 
-export default function RecursiveInput({ obj, label }: RecursiveInputProps) {
+export default function FormBuilder({ obj, label }: FormBuilderProps) {
   const { dispatch } = useStateDispatch();
   const [keys, setKeys] = useState<Record<string, string>>({});
   const [newProps, setNewProps] = useState<Record<string, boolean>>({});
