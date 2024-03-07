@@ -178,7 +178,6 @@ function clearStateValue(
     }
     value = tempObj;
   } else {
-    console.log(dotNotation);
     if (baseKeyCheck(dotNotation)) {
       value = null;
     } else {
