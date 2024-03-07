@@ -1,13 +1,13 @@
 import { useState } from "react";
-import FormBuilder from "../form-builder";
 import { ObjectType } from "../../state/reducer";
 
 type SectionProps = {
   label: string;
   state: ObjectType;
+  children: React.ReactNode;
 };
 
-export default function Section({ label, state }: SectionProps) {
+export default function Section({ label, state, children }: SectionProps) {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
   return (
@@ -32,7 +32,7 @@ export default function Section({ label, state }: SectionProps) {
       </div>
       {isOpen && (
         <div className="w-full space-y-8 py-8 justify-center px-4 border-l border-r border-b border-gray-100 dark:border-white/10 cursor-pointer  rounded-b-xl">
-          <FormBuilder obj={state} label={label} />
+          {children}
         </div>
       )}
     </div>

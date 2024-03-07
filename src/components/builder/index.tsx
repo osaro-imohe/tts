@@ -1,5 +1,6 @@
 import { useStateDispatch } from "../../state/context";
 import { ObjectType } from "../../state/reducer";
+import FormBuilder from "../form-builder";
 import Section from "../section";
 
 export default function Builder() {
@@ -44,7 +45,13 @@ export default function Builder() {
       <div className="w-full space-y-3 m-0 px-1.5">
         {Object.keys(state).map((key: string) => {
           const stateObj = state[key] as ObjectType;
-          return <Section state={stateObj} label={key} />;
+          return (
+            <>
+              <Section state={stateObj} label={key}>
+                <FormBuilder obj={stateObj} label={key} />
+              </Section>
+            </>
+          );
         })}
       </div>
     </div>

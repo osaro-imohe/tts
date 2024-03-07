@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useStateDispatch } from "../../state/context";
-import { objectIsEmpty, clearStateValue, keyExistsInObj } from "../../utils";
+import { objectIsEmpty, keyExistsInObj } from "../../utils";
 import RenderInput from "../render-input";
 
 type FormInnerProps = {
